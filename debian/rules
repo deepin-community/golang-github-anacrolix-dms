@@ -1,4 +1,15 @@
 #!/usr/bin/make -f
 
+# install all to include sample embedded image data file
+export DH_GOLANG_INSTALL_ALL=1
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_installman:
+	rst2man debian/dms.rst > debian/dms.1
+	dh_installman
+
+override_dh_clean:
+	dh_clean
+	rm -f debian/dms.1

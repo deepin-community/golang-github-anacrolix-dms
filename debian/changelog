@@ -1,5 +1,64 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-anacrolix-dms (1.5.0-2) unstable; urgency=medium
 
-  * Initial release
+  * golang-github-anacrolix-dms-dev
+     Depends: golang-github-anacrolix-log-dev
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Drew Parsons <dparsons@debian.org>  Thu, 10 Nov 2022 10:36:49 +0100
+
+golang-github-anacrolix-dms (1.5.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    - deprecates debian patch fix-syntax-error.patch
+    - Build-Depends: golang-github-anacrolix-log-dev
+  * install all with DH_GOLANG_INSTALL_ALL to include sample embedded
+    image data file
+  * Standards-Version: 4.6.1
+  * debhelper compatibility level 13
+
+ -- Drew Parsons <dparsons@debian.org>  Wed, 09 Nov 2022 15:25:00 +0100
+
+golang-github-anacrolix-dms (1.1.0-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Aloïs Micard ]
+  * update debian/gitlab-ci.yml (using pkg-go-tools/ci-config)
+
+  [ Mathias Gibbens ]
+  * Add patch to fix FTBFS (Closes: #1017262)
+  * Fix d/watch
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Thu, 29 Sep 2022 21:28:40 +0000
+
+golang-github-anacrolix-dms (1.1.0-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Add missing ${misc:Built-Using} to Built-Using on anacrolix-dms.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 21 Aug 2021 12:36:05 +0100
+
+golang-github-anacrolix-dms (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    - drop Build-Depends: golang-github-mattn-go-gtk-dev, libgtk2.0-dev
+      (go-gtk usage moved to separate module dms-gtk-gui)
+    - add Build-Depends: golang-github-nfnt-resize-dev
+  * Standards-Version: 4.5.0
+  * Present Build-Depends as dev package Depends.
+
+ -- Drew Parsons <dparsons@debian.org>  Sat, 15 Feb 2020 17:41:45 +0800
+
+golang-github-anacrolix-dms (1.0.0-2) unstable; urgency=medium
+
+  * source upload for migration to testing
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 13 Sep 2019 12:09:26 +0800
+
+golang-github-anacrolix-dms (1.0.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #928372)
+    - the dms binary is shipped in the anacrolix-dms package
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 09 Aug 2019 23:07:51 +0800
